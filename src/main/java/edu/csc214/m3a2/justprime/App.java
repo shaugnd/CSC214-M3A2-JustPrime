@@ -84,7 +84,14 @@ public class App {
                 }
 
                 ArrayList<Integer> primeFactors = factorizer.primeFactors(numberToFactor);
-
+                // Grammar Grammar!  Let's get our plurals and singulars sorted out.
+                if (!inputResult.isRandomRequested() && factorizer.isPrime(numberToFactor)) {
+                    responseMessage = "You entered " + numberToFactor
+                            + ". That number is prime. Its only prime factor is itself: ";
+                } else if (!inputResult.isRandomRequested() && numberToFactor <= 1) {
+                    responseMessage = "You entered " + numberToFactor
+                            + ". That number does not have prime factors: ";
+}
                 System.out.println(responseMessage + primeFactors);
                 System.out.println();
             }
